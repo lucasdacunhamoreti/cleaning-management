@@ -7,6 +7,7 @@ import { Button } from '@chakra-ui/react'
 import { AddIcon } from '@chakra-ui/icons';
 import { useState } from "react";
 import ModalFormCustomer from "@/app/components/form-customer/page";
+import CustomerTable from "@/app/components/customer-table/page";
 
 export default function MainPage() {
   const [openedModal, setModal] = useState(false);
@@ -22,6 +23,7 @@ export default function MainPage() {
           Novo cliente
         </Button>
         { openedModal && <ModalFormCustomer onClose={() => setModal(false)} /> }
+        <CustomerTable />
       </main>
     </ChakraProvider>
   );
